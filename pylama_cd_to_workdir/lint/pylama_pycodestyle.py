@@ -1,7 +1,7 @@
 """pycodestyle support."""
 from pycodestyle import BaseReport, StyleGuide, get_parser, _parse_multi_options
 
-from pylama.lint import Linter as Abstract
+from pylama_cd_to_workdir.lint import Linter as Abstract
 
 
 try:

@@ -3,45 +3,45 @@
 LINTERS = {}
 
 try:
-    from pylama.lint.pylama_mccabe import Linter
+    from pylama_cd_to_workdir.lint.pylama_mccabe import Linter
     LINTERS['mccabe'] = Linter()
 except ImportError:
     pass
 
 try:
-    from pylama.lint.pylama_eradicate import Linter
+    from pylama_cd_to_workdir.lint.pylama_eradicate import Linter
     LINTERS['eradicate'] = Linter()
 except ImportError:
     pass
 
 try:
-    from pylama.lint.pylama_pydocstyle import Linter
+    from pylama_cd_to_workdir.lint.pylama_pydocstyle import Linter
     LINTERS['pep257'] = Linter()  # for compatibility
     LINTERS['pydocstyle'] = Linter()
 except ImportError:
     pass
 
 try:
-    from pylama.lint.pylama_pycodestyle import Linter
+    from pylama_cd_to_workdir.lint.pylama_pycodestyle import Linter
     LINTERS['pep8'] = Linter()  # for compability
     LINTERS['pycodestyle'] = Linter()
 except ImportError:
     pass
 
 try:
-    from pylama.lint.pylama_pyflakes import Linter
+    from pylama_cd_to_workdir.lint.pylama_pyflakes import Linter
     LINTERS['pyflakes'] = Linter()
 except ImportError:
     pass
 
 try:
-    from pylama.lint.pylama_radon import Linter
+    from pylama_cd_to_workdir.lint.pylama_radon import Linter
     LINTERS['radon'] = Linter()
 except ImportError:
     pass
 
 try:
-    from pylama.lint.pylama_pylint import Linter
+    from pylama_cd_to_workdir.lint.pylama_pylint import Linter
     LINTERS['pylint'] = Linter()
 except ImportError:
     pass

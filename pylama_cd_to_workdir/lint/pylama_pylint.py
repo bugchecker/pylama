@@ -3,15 +3,13 @@ import logging
 from os import path as op, environ
 
 from astroid import MANAGER
-from pylama.lint import Linter as BaseLinter
+from pylama_cd_to_workdir.lint import Linter as BaseLinter
 from pylint.__pkginfo__ import numversion
 from pylint.lint import Run
 from pylint.reporters import BaseReporter
 
 
 CURDIR = op.abspath(op.dirname(__file__))
-HOME_RCFILE = op.abspath(op.join(environ.get('HOME', ''), '.pylintrc'))
-LAMA_RCFILE = op.abspath(op.join(CURDIR, 'pylint.rc'))
 
 
 logger = logging.getLogger('pylama')
@@ -69,9 +67,6 @@ class _Params(object):
     def __init__(self, select=None, ignore=None, params=None):
 
         params = dict(params)
-
-        if op.exists(HOME_RCFILE):
-            params['rcfile'] = HOME_RCFILE
 
         if select:
             enable = params.get('enable', None)

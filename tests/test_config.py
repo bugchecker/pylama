@@ -1,5 +1,5 @@
-from pylama.config import parse_options, get_config
-from pylama.core import run, prepare_params
+from pylama_cd_to_workdir.config import parse_options, get_config
+from pylama_cd_to_workdir.core import run, prepare_params
 
 
 def test_config():
@@ -57,7 +57,7 @@ def test_prepare_params():
 
 
 def test_merge_params():
-    from pylama.core import merge_params
+    from pylama_cd_to_workdir.core import merge_params
 
     params = {'ignore': {1, 2, 3}}
     lparams = {'ignore': {4, 5}}

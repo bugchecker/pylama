@@ -1,6 +1,6 @@
 """Commented-out code checking."""
 from eradicate import commented_out_code_line_numbers
-from pylama.lint import Linter as Abstract
+from pylama_cd_to_workdir.lint import Linter as Abstract
 
 try:
     converter = unicode

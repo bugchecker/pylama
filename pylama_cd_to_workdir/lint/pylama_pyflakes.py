@@ -2,7 +2,7 @@
 
 from pyflakes import checker
 
-from pylama.lint import Linter as Abstract
+from pylama_cd_to_workdir.lint import Linter as Abstract
 
 
 checker.messages.UnusedImport.message = "W0611 %r imported but unused"

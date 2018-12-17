@@ -85,8 +85,8 @@ class PylamaItem(pytest.Item, pytest.File):
 
 
 def check_file(path):
-    from pylama.main import parse_options, process_paths
-    from pylama.config import CURDIR
+    from pylama_cd_to_workdir.main import parse_options, process_paths
+    from pylama_cd_to_workdir.config import CURDIR
 
     options = parse_options()
     path = op.relpath(str(path), CURDIR)

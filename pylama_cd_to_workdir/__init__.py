@@ -5,6 +5,6 @@
 """
 
 __version__ = "7.7.1"
-__project__ = "pylama"
+__project__ = "pylama-cd-to-workdir"
 __author__ = "Kirill Klenov <horneds@gmail.com>"
 __license__ = "GNU LGPL"

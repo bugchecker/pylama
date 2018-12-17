@@ -1,8 +1,8 @@
 import sys
 
-from pylama.config import parse_options
-from pylama.core import run
-from pylama.lint.extensions import LINTERS
+from pylama_cd_to_workdir.config import parse_options
+from pylama_cd_to_workdir.core import run
+from pylama_cd_to_workdir.lint.extensions import LINTERS
 
 
 def test_mccabe():

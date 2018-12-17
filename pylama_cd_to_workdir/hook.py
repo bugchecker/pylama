@@ -67,7 +67,7 @@ def install_git(path):
     with open(hook, 'w') as fd:
         fd.write("""#!/usr/bin/env python
 import sys
-from pylama.hook import git_hook
+from pylama_cd_to_workdir.hook import git_hook
 
 if __name__ == '__main__':
     sys.exit(git_hook())
@@ -87,10 +87,10 @@ def install_hg(path):
         c.add_section('hooks')
 
     if not c.has_option('hooks', 'commit'):
-        c.set('hooks', 'commit', 'python:pylama.hooks.hg_hook')
+        c.set('hooks', 'commit', 'python:pylama_cd_to_workdir.hooks.hg_hook')
 
     if not c.has_option('hooks', 'qrefresh'):
-        c.set('hooks', 'qrefresh', 'python:pylama.hooks.hg_hook')
+        c.set('hooks', 'qrefresh', 'python:pylama_cd_to_workdir.hooks.hg_hook')
 
     c.write(open(hook, 'w+'))
 

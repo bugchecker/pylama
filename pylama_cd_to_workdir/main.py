@@ -14,7 +14,7 @@ def check_path(options, rootdir=None, candidates=None, code=None):
     """Check path.
 
     :param rootdir: Root directory (for making relative file paths)
-    :param options: Parsed pylama options (from pylama.config.parse_options)
+    :param options: Parsed pylama options (from pylama_cd_to_workdir.config.parse_options)
 
     :returns: (list) Errors list
 

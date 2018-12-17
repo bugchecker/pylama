@@ -1,4 +1,4 @@
-MODULE=pylama
+MODULE=pylama_cd_to_workdir
 SPHINXBUILD=sphinx-build
 ALLSPHINXOPTS= -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 BUILDDIR=_build
@@ -66,12 +66,12 @@ upload: clean
 
 .PHONY: t
 t test:
-	@py.test --pylama pylama
-	@py.test -sx tests
+	@py.test --pylama pylama_cd_to_workdir
+	@py.test -sx pylama_cd_to_workdir_tests
 
 .PHONY: audit
 audit:
-	@python -m "pylama.main"
+	@python -m "pylama_cd_to_workdir.main"
 
 .PHONY: docs
 docs: docs

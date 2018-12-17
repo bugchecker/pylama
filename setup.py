@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""Setup pylama installation."""
+"""Setup pylama-cd-to-workdir installation."""
 
 import re
 from os import path as op
@@ -12,7 +12,7 @@ from setuptools import setup, find_packages
 _read = lambda f: open(
     op.join(op.dirname(__file__), f), encoding='utf-8').read() if op.exists(f) else ''
 
-_meta = _read('pylama/__init__.py')
+_meta = _read('pylama_cd_to_workdir/__init__.py')
 _license = re.search(r'^__license__\s*=\s*"(.*)"', _meta, re.M).group(1)
 _project = re.search(r'^__project__\s*=\s*"(.*)"', _meta, re.M).group(1)
 _version = re.search(r'^__version__\s*=\s*"(.*)"', _meta, re.M).group(1)
@@ -35,13 +35,13 @@ meta = dict(
     author_email='horneds@gmail.com',
     url=' https://github.com/klen/pylama',
 
-    packages=find_packages(exclude=['plugins']),
+    packages=find_packages(exclude=['plugins', 'tests*']),
 
     entry_points={
         'console_scripts': [
-            'pylama = pylama.main:shell',
+            'pylama-cd-to-workdir = pylama_cd_to_workdir.pylama_cd_to_workdir:shell',
         ],
-        'pytest11': ['pylama = pylama.pytest'],
+        'pytest11': ['pylama-cd-to-workdir = pylama_cd_to_workdir.pytest'],
     },
 
     classifiers=[

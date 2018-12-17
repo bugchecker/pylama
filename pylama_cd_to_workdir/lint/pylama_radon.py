@@ -1,7 +1,7 @@
 from radon.visitors import ComplexityVisitor
 from radon.complexity import add_inner_blocks
 
-from pylama.lint import Linter as Abstract
+from pylama_cd_to_workdir.lint import Linter as Abstract
 
 
 class Linter(Abstract):

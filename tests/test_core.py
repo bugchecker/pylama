@@ -1,11 +1,11 @@
 import os.path as op
 
-from pylama.check_async import check_async
-from pylama.config import parse_options
-from pylama.core import filter_errors, parse_modeline, run
-from pylama.errors import Error, remove_duplicates
-from pylama.hook import git_hook, hg_hook
-from pylama.main import shell, check_path
+from pylama_cd_to_workdir.check_async import check_async
+from pylama_cd_to_workdir.config import parse_options
+from pylama_cd_to_workdir.core import filter_errors, parse_modeline, run
+from pylama_cd_to_workdir.errors import Error, remove_duplicates
+from pylama_cd_to_workdir.hook import git_hook, hg_hook
+from pylama_cd_to_workdir.main import shell, check_path
 
 
 def test_filter_errors():
